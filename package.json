@@ -1,0 +1,30 @@
+{
+  "name": "portfolio-redesigned",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run tailwind:build && concurrently \"npm:tailwind:watch\" \"npm:dev:worker\"",
+    "dev:worker": "wrangler dev",
+    "deploy": "npm run tailwind:build && wrangler deploy --minify",
+    "tailwind:build": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles.css --minify",
+    "tailwind:watch": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles.css --watch",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "hono": "^4.11.9",
+    "hono-rate-limiter": "^0.5.3"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "@tailwindcss/cli": "^4.1.18",
+    "@tanstack/eslint-config": "^0.3.4",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.0.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.4.0"
+  }
+}

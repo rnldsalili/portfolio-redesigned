@@ -1,0 +1,57 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-redesigned",
+  "main": "src/index.ts",
+  "assets": {
+    "directory": "./public"
+  },
+  "compatibility_date": "2026-02-11",
+  "dev": {
+		"port": 3000
+	},
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 1
+	},
+  "vars": {
+		"CORS_ORIGINS": "http://localhost:3010",
+	},
+  "ratelimits": [
+		{
+			"name": "RATE_LIMITER",
+			"namespace_id": "2001",
+			"simple": {
+				"limit": 100,
+				"period": 60
+			}
+		}
+	],
+  "env": {
+    "production": {
+        "name": "api-church-members-management-system",
+        "vars": {
+          "CORS_ORIGINS": "https://www.ronald.it.com,https://ronald.it.com",
+        },
+        "ratelimits": [
+          {
+            "name": "RATE_LIMITER",
+            "namespace_id": "1002",
+            "simple": {
+              "limit": 100,
+              "period": 60
+            }
+          }
+        ],
+        "routes": [
+          {
+            "pattern": "ronald.it.com",
+            "custom_domain": true
+          },
+          {
+            "pattern": "www.ronald.it.com",
+            "custom_domain": true
+          }
+        ]
+      },
+  },
+}
