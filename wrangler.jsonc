@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "portfolio-redesigned",
+  "name": "portfolio",
   "main": "src/index.ts",
   "assets": {
     "directory": "./public"
