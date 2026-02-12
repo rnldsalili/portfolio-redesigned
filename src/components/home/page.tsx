@@ -35,7 +35,7 @@ const HomePage: FC<HomePageProps> = ({ content = portfolioContent }) => {
             />
           </div>
 
-          <aside aria-label='Profile and supporting details' class='space-y-12 lg:col-span-4'>
+          <aside aria-label='Profile and supporting details' class='space-y-12 lg:col-span-4 animate-slide-up delay-400'>
             <HomeSidebar
               competencies={content.competencies}
               credentials={content.credentials}
@@ -46,7 +46,9 @@ const HomePage: FC<HomePageProps> = ({ content = portfolioContent }) => {
           </aside>
         </main>
 
-        <HomeFooter note={content.footerNote} />
+        <div class="animate-slide-up delay-500">
+          <HomeFooter note={content.footerNote} />
+        </div>
       </div>
     </div>
   );

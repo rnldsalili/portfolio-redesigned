@@ -12,7 +12,7 @@ interface HomeHeaderProps {
 const HomeHeader: FC<HomeHeaderProps> = ({ navItems, profile }) => {
   return (
     <>
-      <header class='portfolio-header sticky top-0 z-40 border-b border-[var(--brand-border)]'>
+      <header class='portfolio-header sticky top-0 z-40 border-b border-[var(--brand-border)] animate-slide-up'>
         <div class='mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8'>
           <div class='flex items-center gap-3'>
             <div class='flex h-11 w-11 items-center justify-center rounded-md bg-[var(--brand-primary)] text-sm font-black text-[var(--brand-logo-foreground)] shadow-[0_0_20px_var(--brand-shadow)]'>

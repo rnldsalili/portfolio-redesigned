@@ -8,7 +8,7 @@ interface HomeSummaryProps {
 
 const HomeSummary: FC<HomeSummaryProps> = ({ summary }) => {
   return (
-    <section class='scroll-mt-24' id='summary'>
+    <section class='scroll-mt-24 animate-slide-up delay-100' id='summary'>
       <div class='mb-8 space-y-2'>
         <h1 class='text-4xl font-extrabold tracking-tight text-[var(--brand-text-main)] sm:text-5xl'>
           {summary.heading}

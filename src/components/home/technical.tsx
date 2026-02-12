@@ -12,7 +12,7 @@ const HomeTechnical: FC<HomeTechnicalProps> = ({ metrics, stack, tabs }) => {
   const [inactiveTab, activeTab] = tabs;
 
   return (
-    <section class='scroll-mt-24' id='technical'>
+    <section class='scroll-mt-24 animate-slide-up delay-300' id='technical'>
       <h2 class='portfolio-section-header'>Technical Infrastructure</h2>
       <div class='portfolio-card portfolio-tech-shell p-5 sm:p-6'>
         <div class='portfolio-tech-tabs'>

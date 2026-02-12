@@ -55,7 +55,7 @@ const BasicLayout: FC<BasicLayoutProps> = ({
           {headContent}
           <link rel='stylesheet' href='/styles.css' />
         </head>
-        <body class={joinClasses('min-h-screen antialiased', bodyClassName)}>
+        <body class={joinClasses('min-h-screen antialiased animate-fade-in', bodyClassName)}>
           {children}
           {footerScripts}
         </body>
