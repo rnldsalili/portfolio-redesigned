@@ -11,7 +11,7 @@ export const portfolioContent: PortfolioContent = {
     { href: '#summary', label: 'Summary', isActive: true },
     { href: '#experience', label: 'Experience' },
     { href: '#technical', label: 'Skills' },
-    { href: '/contact', label: 'Contact' },
+    // { href: '/contact', label: 'Contact' },
   ],
   links: {
     cv: '#',
@@ -109,5 +109,5 @@ export const portfolioContent: PortfolioContent = {
     ],
     metrics: [],
   },
-  footerNote: `© ${new Date().getFullYear()} Ronald Salili. All rights reserved.`,
+  footerNote: `© 2026 Ronald Salili. All rights reserved.`,
 };
