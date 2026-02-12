@@ -28,7 +28,6 @@
   ],
   "env": {
     "production": {
-      "name": "api-church-members-management-system",
       "vars": {
         "CORS_ORIGINS": "https://www.ronald.it.com,https://ronald.it.com",
       },
