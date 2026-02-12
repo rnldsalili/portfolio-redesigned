@@ -26,43 +26,43 @@ const HomeHeader: FC<HomeHeaderProps> = ({ navItems, profile }) => {
             </div>
           </div>
 
-          <nav aria-label='Primary navigation' class='hidden items-center gap-1 lg:flex'>
-            {navItems.map((item) => {
-              const linkClass = item.isActive ? 'portfolio-nav-link is-active' : 'portfolio-nav-link';
+          <div class='flex items-center gap-6'>
+            <nav aria-label='Primary navigation' class='hidden items-center gap-1 lg:flex'>
+              {navItems.map((item) => {
+                const linkClass = item.isActive ? 'portfolio-nav-link is-active' : 'portfolio-nav-link';
 
-              return (
-                <a class={linkClass} href={item.href} key={item.href}>
-                  {item.label}
-                </a>
-              );
-            })}
-          </nav>
+                return (
+                  <a class={linkClass} href={item.href} key={item.href}>
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
 
-          <div class='flex items-center gap-2 sm:gap-3'>
-            <button
-              aria-label='Switch theme'
-              aria-pressed='false'
-              class='portfolio-icon-button'
-              data-theme-toggle
-              type='button'
-            >
-              <SunIcon className='theme-icon theme-icon--sun h-5 w-5' />
-              <MoonIcon className='theme-icon theme-icon--moon h-5 w-5' />
-            </button>
+            <div class='flex items-center gap-2 sm:gap-3'>
+              <button
+                aria-label='Switch theme'
+                aria-pressed='false'
+                class='portfolio-icon-button'
+                data-theme-toggle
+                type='button'
+              >
+                <SunIcon className='theme-icon theme-icon--sun h-5 w-5' />
+                <MoonIcon className='theme-icon theme-icon--moon h-5 w-5' />
+              </button>
 
-
-
-            <button
-              aria-controls='mobile-navigation'
-              aria-expanded='false'
-              aria-label='Open navigation menu'
-              class='portfolio-icon-button lg:hidden'
-              data-menu-trigger
-              type='button'
-            >
-              <MenuIcon className='menu-icon menu-icon--open h-5 w-5' />
-              <CloseIcon className='menu-icon menu-icon--close h-5 w-5' />
-            </button>
+              <button
+                aria-controls='mobile-navigation'
+                aria-expanded='false'
+                aria-label='Open navigation menu'
+                class='portfolio-icon-button lg:hidden'
+                data-menu-trigger
+                type='button'
+              >
+                <MenuIcon className='menu-icon menu-icon--open h-5 w-5' />
+                <CloseIcon className='menu-icon menu-icon--close h-5 w-5' />
+              </button>
+            </div>
           </div>
         </div>
       </header>

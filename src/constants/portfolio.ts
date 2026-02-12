@@ -10,9 +10,7 @@ export const portfolioContent: PortfolioContent = {
   navItems: [
     { href: '#summary', label: 'Summary', isActive: true },
     { href: '#experience', label: 'Experience' },
-    { href: '#competencies', label: 'Competencies' },
-    { href: '#technical', label: 'Technical' },
-    { href: '#education', label: 'Education' },
+    { href: '#technical', label: 'Skills' },
     { href: '/contact', label: 'Contact' },
   ],
   links: {

@@ -8,7 +8,7 @@ interface HomeExperienceProps {
 
 const HomeExperience: FC<HomeExperienceProps> = ({ items }) => {
   return (
-    <section id='experience'>
+    <section class='scroll-mt-24' id='experience'>
       <h2 class='portfolio-section-header'>Professional Experience</h2>
       <div class='space-y-11'>
         {items.map((item) => {
