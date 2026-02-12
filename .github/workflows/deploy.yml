@@ -32,5 +32,4 @@ jobs:
           -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}"
 
       - name: Deploy API (production)
-        working-directory: apps/api
         run: bun run deploy -- --env production
