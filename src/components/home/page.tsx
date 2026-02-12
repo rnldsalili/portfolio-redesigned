@@ -21,7 +21,7 @@ const HomePage: FC<HomePageProps> = ({ content = portfolioContent }) => {
       >
         Skip to main content
       </a>
-      <HomeHeader cvHref={content.links.cv} navItems={content.navItems} profile={content.profile} />
+      <HomeHeader navItems={content.navItems} profile={content.profile} />
 
       <div class='mx-auto w-full max-w-[1280px] px-4 pb-12 pt-10 sm:px-6 lg:px-8'>
         <main class='grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12' id='main-content' tabindex={-1}>

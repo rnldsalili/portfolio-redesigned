@@ -1,5 +1,5 @@
-import { portfolioInteractionScript } from '@/constants/portfolio-scripts';
+import { portfolioInteractionScriptSrc } from '@/constants/script-assets';
 
 export const buildFooterScripts = (nonce?: string) => {
-  return <script dangerouslySetInnerHTML={{ __html: portfolioInteractionScript }} nonce={nonce} />;
+  return <script nonce={nonce} src={portfolioInteractionScriptSrc} />;
 };

@@ -77,6 +77,7 @@ export function createBaseConfig(options = {}) {
                 'node_modules/**',
                 '.turbo/**',
                 '.wrangler/**',
+                'public/scripts/**',
                 '*.config.js',
                 '*.config.ts',
                 'worker-configuration.d.ts',

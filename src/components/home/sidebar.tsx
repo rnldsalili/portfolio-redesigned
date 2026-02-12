@@ -67,6 +67,8 @@ const HomeSidebar: FC<HomeSidebarProps> = ({
                 class='flex items-center gap-2 text-sm font-medium text-[var(--brand-text-muted)] hover:text-[var(--brand-primary)]'
                 href={link.href}
                 key={link.label}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
                 {renderQuickLinkIcon(link.icon)}
                 <span>{link.label}</span>

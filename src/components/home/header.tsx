@@ -4,19 +4,19 @@ import type { FC } from 'hono/jsx';
 import type { PortfolioNavItem, PortfolioProfile } from '@/types/portfolio';
 
 interface HomeHeaderProps {
-  cvHref: string;
+
   navItems: Array<PortfolioNavItem>;
   profile: PortfolioProfile;
 }
 
-const HomeHeader: FC<HomeHeaderProps> = ({ cvHref, navItems, profile }) => {
+const HomeHeader: FC<HomeHeaderProps> = ({ navItems, profile }) => {
   return (
     <>
       <header class='portfolio-header sticky top-0 z-40 border-b border-[var(--brand-border)]'>
         <div class='mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8'>
           <div class='flex items-center gap-3'>
             <div class='flex h-11 w-11 items-center justify-center rounded-md bg-[var(--brand-primary)] text-sm font-black text-[var(--brand-logo-foreground)] shadow-[0_0_20px_var(--brand-shadow)]'>
-              {profile.initials}
+              <img src="/favicon.svg" alt={profile.name} class="h-9 w-9 rounded-sm" />
             </div>
             <div class='hidden md:block'>
               <p class='text-sm font-bold leading-none text-[var(--brand-text-main)]'>{profile.name}</p>
@@ -50,12 +50,7 @@ const HomeHeader: FC<HomeHeaderProps> = ({ cvHref, navItems, profile }) => {
               <MoonIcon className='theme-icon theme-icon--moon h-5 w-5' />
             </button>
 
-            <a
-              class='hidden rounded-md bg-[var(--brand-primary)] px-4 py-2 text-xs font-bold uppercase tracking-wide text-[var(--brand-logo-foreground)] shadow-[0_0_16px_var(--brand-shadow)] transition-all hover:bg-[var(--brand-primary-dark)] hover:shadow-[0_0_18px_var(--brand-shadow)] sm:inline-flex'
-              href={cvHref}
-            >
-              Download CV
-            </a>
+
 
             <button
               aria-controls='mobile-navigation'
@@ -104,12 +99,7 @@ const HomeHeader: FC<HomeHeaderProps> = ({ cvHref, navItems, profile }) => {
             })}
           </nav>
 
-          <a
-            class='mt-6 inline-flex w-full justify-center rounded-md bg-[var(--brand-primary)] px-4 py-2 text-xs font-bold uppercase tracking-wide text-[var(--brand-logo-foreground)] transition-colors hover:bg-[var(--brand-primary-dark)]'
-            href={cvHref}
-          >
-            Download CV
-          </a>
+
         </div>
       </div>
     </>

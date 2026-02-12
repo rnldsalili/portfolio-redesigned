@@ -31,16 +31,18 @@ const HomeTechnical: FC<HomeTechnicalProps> = ({ metrics, stack, tabs }) => {
           })}
         </div>
 
-        <div class='mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          {metrics.map((metric) => {
-            return (
+        {metrics.length > 0 && (
+          <div class='mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2'>
+            {metrics.map((metric) => (
               <div class='portfolio-metric-card' key={metric.label}>
                 <p class='portfolio-metric-label'>{metric.label}</p>
-                <p class={metric.isAccent ? 'portfolio-metric-value is-accent' : 'portfolio-metric-value'}>{metric.value}</p>
+                <p class={metric.isAccent ? 'portfolio-metric-value is-accent' : 'portfolio-metric-value'}>
+                  {metric.value}
+                </p>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
