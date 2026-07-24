@@ -29,7 +29,7 @@
   "env": {
     "production": {
       "vars": {
-        "CORS_ORIGINS": "https://www.ronald.it.com,https://ronald.it.com",
+        "CORS_ORIGINS": "https://www.ronald.tellbadi.com,https://ronald.tellbadi.com",
       },
       "ratelimits": [
         {
@@ -43,11 +43,11 @@
       ],
       "routes": [
         {
-          "pattern": "ronald.it.com",
+          "pattern": "ronald.tellbadi.com",
           "custom_domain": true
         },
         {
-          "pattern": "www.ronald.it.com",
+          "pattern": "www.ronald.tellbadi.com",
           "custom_domain": true
         }
       ]

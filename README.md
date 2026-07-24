@@ -43,6 +43,7 @@ npm run dev
 - `npm run cf-typegen` - regenerate `worker-configuration.d.ts`
 - `npm run lint` - run ESLint
 - `npm run lint:fix` - auto-fix lint issues
+- `npm test` - structural checks for production domain config (routes + CORS)
 
 ## Configuration Notes
 - `CORS_ORIGINS` is read from `wrangler.jsonc` env vars and applied by global CORS middleware.

@@ -9,7 +9,8 @@
     "tailwind:watch": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles.css --watch",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "node --test scripts/verify-domain.test.mjs"
   },
   "dependencies": {
     "hono": "^4.11.9",
